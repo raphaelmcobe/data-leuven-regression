@@ -353,25 +353,21 @@ $$R^2 = \frac{TSS - RSS}{TSS}$$
 --- 
 
 <!-- .slide: data-background="#6d8ba7" -->
- ### Hands-on Exercises
----
-
-<!-- .slide: data-background="#6d8ba7" -->
 ## Linear Regression
 ### Multivariate Regression
----
+--
 
   - In most practical problems, using only one attribute <span class="highlight">is not enough</span> to estimate the response
   - In this case, Linear Regression must estimate a Hyperplane as model $h$.
 
 
---- 
+-- 
 ### Linear Regression with Multiple Variables
 
 $$Y = h(\Theta;X) = \theta_0 + \theta_1 X_1 + \dots + \theta_{n} X_{n}$$
 
 
----
+--
 | Size in ft² | Number of rooms | Price ($) in 1000's |
 |-------------|------------------|----------------------|
 | 2104        | 3                | 460                  |
@@ -381,60 +377,60 @@ $$Y = h(\Theta;X) = \theta_0 + \theta_1 X_1 + \dots + \theta_{n} X_{n}$$
 | ...         |                  | ...                  |
 
 
----
+--
   - As in the univariate case, $\theta$ values must be chosen based on the training set
   - The least squares method also works for the multivariate case
   - Another possibility to perform learning is through the <span class="highlight">Gradient Descent</span> method
 
---- 
+---
 ### Gradient Descent
   - Starting from the <span class="highlight">Mean Squared Error</span> cost function
 
 $$J(\theta) = \frac{1}{2m} \sum_{i=1}^{n} (y_i - h(\theta;\boldsymbol{x}_i))^2
 $$
   - Define parameters $\theta$ that minimize $J$
----
+--
 
 ### Gradient Descent Algorithm
 1. Initialize $\theta$ randomly
 1. Modify $\theta$ values (following the gradient), to reduce $J$ until a minimum value is reached.
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 <div style="text-align: center;">
   <img src="img/gradient_3d_1.png"/>
 </div>
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 <div style="text-align: center;">
   <img src="img/gradient_3d_2.png"/>
 </div>
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 <div style="text-align: center;">
   <img src="img/gradient_3d_3.png"/>
 </div>
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 <div style="text-align: center;">
   <img src="img/gradient_3d_4.png"/>
 </div>
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 <div style="text-align: center;">
   <img src="img/gradient_3d_5.png"/>
 </div>
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 <div style="text-align: center;">
   <img src="img/gradient_3d_6.png"/>
 </div>
---- 
+-- 
 
 <!-- .slide: data-background="#ffffff" -->
 ### Applying Gradient Descent
@@ -443,7 +439,7 @@ $$
 </div>
 
 Repeating <span class="highlight">1</span> training iteration. $MSE = 4.2 \times 10^{12}$, $R^2 = -5.76$
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 ### Applying Gradient Descent
@@ -451,7 +447,7 @@ Repeating <span class="highlight">1</span> training iteration. $MSE = 4.2 \times
   <img src="img/reta_gradient_descent2.png"/>
 </div>
 Repeating <span class="highlight">2</span> training iterations. $MSE = 2.9 \times 10^{11}$, $R^2 = -0.79$
----
+--
 
 <!-- .slide: data-background="#ffffff" -->
 ### Applying Gradient Descent
@@ -462,8 +458,10 @@ Repeating <span class="highlight">2</span> training iterations. $MSE = 2.9 \time
 Repeating <span class="highlight">7</span> training iterations. $MSE = 1.9 \times 10^{11}$, $R^2 = 0.55$
 ---
 
+<!-- .slide: data-background="#6d8ba7" --> 
 ## Residual Analysis
 --
+
 ### Residual Analysis
 * The deterministic component of a regression model does such a good job at explaining the dependent variable that it leaves only the intrinsically unexplainable part of the studied phenomenon to the error;
 * The presence of non-randomness in the error suggests that the independent variables are not explaining everything they could.
